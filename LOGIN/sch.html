@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>know your lover</title>
+        <link rel="stylesheet" href="">
+
+        <style>
+            header{
+                color: green;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                text-align: center;
+            }
+            .tool{
+                text-align: center;
+                padding-top: 20px;
+                margin: 10px;
+
+            }
+            .tool a{
+                text-decoration: none;
+                margin: 10px;
+            }
+            .tool a:hover{
+                color: red;
+            }
+            .home{
+                text-align: center;
+                padding-top: 20px;
+            }
+ .seperator{
+     padding-top: 80px;
+      display: flex;
+      justify-content: center;
+      height: 100px;
+  }
+  .line{
+      width: 150px;
+      background-color: green;
+      height: 10px;
+      border-radius: 50%;
+      bottom: 0;
+  }
+  .asterish{
+      font-size: 50px;
+      padding-bottom: 100px;
+      color: red;
+  }
+  .dot{
+      background-color: brown;
+  }
+
+  /*styling the form*/
+  .form{
+      display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 70px;
+    text-align: center;
+  }
+  /*form content*/
+/*form content*/
+.form-cont{
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 75%;
+    height: 15em;
+    padding-top: 50px;
+}
+  input[type=text]{
+      width: 300px;
+      padding: 15px;
+      border-radius: 50px;
+      text-align: center;
+  }
+  input[type=button]{
+    width: 10em;
+    padding: 10px;
+    background-color: green;
+    cursor: pointer;
+  }
+  input[type=button]:hover{
+      background-color: red;
+      opacity: 0.8;
+  }
+  .close{
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+.close:hover, .close:focus{
+    color: red;
+    cursor: pointer;
+}
+ .result{
+     background-color: #1111;
+     padding: 50px;
+     text-align: center;
+     border-radius: 50px;
+     display: none;
+ }
+        </style>
+    </head>
+    <body>
+        <!-- the head and the navigational menus -->
+        <header>LOVE CALCULATOR</header>
+        <div class="tool">
+            <a href="#" onclick="alert('Hey buddy! please you are already on the home page.')">HOME</a>
+            <a href="#" onclick="document.getElementById('form').style.display = 'block'" >CALCULATE</a>
+            <a href="#">ABOUT</a>
+        </div>
+
+        <!-- body of home page -->
+        <div class="home">
+            GET TO KNOW THE LOVE PERCENTAGE BETWEEN YOU AND YOUR PARTNER.
+        </div>
+        <!-- a form to allow user input -->
+        <div class="form" id="form">
+            <form action="" class="form-cont">
+                <div class="close">
+                    <span id="close" onclick="document.getElementById('form').style.display = 'none'" >&times;</span>
+                </div>
+                <label for="name">NAME</label>
+                <input type="text" placeholder="Enter your name" id="name"><br><br>
+
+                <label for="name">LOVER</label>
+                <input type="text" placeholder="Enter your lover name" id="lover"><br><br>
+
+                <input type="button" value="calculate" id="calculate" onclick="CALCULATE();" >
+            </form>
+        </div>
+        
+        <!-- a div to display the result after the names are entered to make calculation -->
+<div class="result" id="result">
+    The love PERCENTAGE between 
+</div>
+
+        <div class="seperator">
+            <div class="dot"></div>
+            <div class="line line1"></div>
+            <div class="asterish">*</div>
+            <div class="line line2"></div>
+            <div class="asterish">*</div>
+            <div class="line line2"></div>
+            <div class="dot"></div>
+        </div>
+        <script>
+            //getting the form by the id
+            var form = document.getElementById("form");
+
+            //funtion to enable us open and close the form
+            window.onclick = function(event){
+                if(event.target == form){
+                    form.style.display = "none";
+                }
+            }
+            // a funtion to ensure all input field are filled before calculation is done
+            function CALCULATE(){
+                var Only_letters = /^[A-Za-z]+$/;
+                var Name = document.getElementById('name');
+                var Lover = document.getElementById('lover');
+            
+                if(Name.value.match(Only_letters) && Lover.value.match(Only_letters) ){
+                    var result = document.getElementById('result');
+                    window.onclick = function(event){
+                        if(event.target == result){
+                            result.style.display = "block";
+                        }
+                    }
+                }else if(Name.value.match(Only_letters)){
+                    alert("Please enter the name of your lover to proceed with the calculation.");
+                }else if(Lover.value.match(Only_letters)){
+                    alert("Please enter your name to continue");
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>

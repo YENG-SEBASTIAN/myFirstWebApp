@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form</title>
+        <style>
+            .form{
+                text-align: center;
+                border-image: url(border.png) 50 round;
+                background-color: blue;
+                width: 500px;
+                left: 50%;
+                right: 50px;
+            }
+            .img{
+                margin-right: auto;
+                margin-left: auto;
+                display: block;
+                top: 0%;
+                border-radius: ;
+                padding-bottom: 0;
+            }
+            .main input[type="text"],input[type="password"]{
+                width: 30%;
+                padding: 15px;
+                border-radius: 10px;
+                border: 1px solid black;
+            }
+            .main input[type="submit"]{
+                width: 100px;
+                height: 50px;
+                color: black;
+                background-color: green;
+                cursor: pointer;
+            }
+            .main input[type="submit"]:hover{
+                color: white;
+            }
+            .here{
+                font-style: italic;
+                color: red;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" class="form">
+            <div class="img">
+                <img src="image/mango_org.png" alt="pic">
+            </div>
+            <div class="main">
+                <p>NAME:</p>
+            <input type="text" name="name" id="name">
+            <p>PASSWORD:</p>
+            <input type="password" name="pass" id="pass"><br><br>
+            <a href="#" onclick="mynext()"> <input type="submit" name="submit" id="sub" ></a>
+            </div>
+            
+        </form>
+        <div class="here" id="here">
+            <h1>Hello chairmo, here you are. Congrastulations for being on this age.</h1>
+        </div>
+        <script>
+           /* let a = document.getElementById('d');
+            function say() {
+                alert("hello");
+            }
+            a.onclick=say;
+        
+            b.onclick = function() {
+                alert('chairmo');
+            }
+            /*let submit = document.getElementById('sub');
+            let name = document.getElementById('name');
+            let email = document.getElementById('email');
+            let username = "sabs";
+            submit.onclick = function(){
+                let me = name.value;
+                if(me === username){
+                    alert('name is correct');
+                }
+            }*/
+
+            let name = document.getElementById('name');
+            let pass = document.getElementById('pass');
+            let submit = document.getElementById('sub');
+            let username = /^[A-Za-z]+$/;
+            let password = /^[0-9A-A-Za-z]+$/;
+
+            submit.onclick = function(e){
+                e.preventDefault();
+                if(name.value.match(username) && pass.value.match(password)){
+                   // alert('Login successful');
+                   window.location ="C:\Users\Sebastian\Desktop\my work\LOGIN\Project\FORM.html";
+                }else{
+                    alert("user must have alphabetic name and alphanumeric password only");
+                }
+            }
+            
+        
+             
+        </script>
+    </body>
+</html>

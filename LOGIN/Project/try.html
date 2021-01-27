@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ROSA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="image/mango_org.png">
+        <link rel="stylesheet" href="try.css">
+    </head>
+    <body>
+        <div class="nav">
+            <div>
+                <img src="image/logo-rosa.png" alt="Logo">
+            </div>
+            <ul class="topnav">
+                <li><a href="#">home</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">reservation</a></li>
+                <li><a href="#">news</a></li>
+                <li><a href="#" onclick="document.getElementById('form').style.display = 'block'">contact</a></li>
+            </ul>
+        </div>
+
+        <!-- creating a form -->
+        <div class="form" id="form">
+            <form action="" class="form-cont animate">
+                <div class="pic">
+                    <span onclick="document.getElementById('form').style.display = 'none'" class="times">&times;</span>
+                    <img src="image/mango_org.png" alt="logo">
+                    <div>
+                        <img src="image/logo-rosa.png" alt="logo">
+                    </div>
+                </div>
+                <div class="main">
+                    <p>Username</p>
+                    <input type="text" placeholder="Enter your name"><br><br>
+                    <p>Username</p>
+                    <input type="password" placeholder="Enter your name"><br><br>
+                    <button class="submit" onclick="">Login</button><br><br>
+                    <input type="checkbox" checked="checked">Remember me.<br>
+
+                </div>
+                <div class="apear" style="background-color: orange;">
+                    <button class="cancel" onclick="document.getElementById('form').style.display = 'none'">cancel</button>
+                        <span onclick="">Forgot <a href="#">Password</a></span>
+                </div>
+            </form>
+        </div>
+<!-- some javascript codes behind the form  -->
+<script>
+    //geting the form
+    var form = document.getElementById('form');
+    //functions that will work on the cancel and close
+    windows.onclick = function(event){
+        if(event.style == form){
+            form.style.display = 'none';
+        }
+    }
+</script>
+
+
+
+<section class="hero" id="hero">
+</section>
+
+
+
+
+    </body>
+</html>

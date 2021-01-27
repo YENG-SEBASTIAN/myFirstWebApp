@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List</title>
+    </head>
+    <body>
+
+        <input type="text" id="texVal">
+        <button onclick="mylist() ">add</button>
+
+
+        <script>
+        
+
+            function mylist() {
+                    let text = document.getElementById('texVal').value;
+                let body = document.querySelector('body');
+                let ul = document.createElement('ul');
+                let li = document.createElement('li');
+                let textnode = document.createTextNode(text);
+
+                //appending
+                li.appendChild(textnode);
+                ul.appendChild(li);
+                body.appendChild(ul);
+            }
+
+
+            //table
+            function tablein() {
+                let name = document.getElementById('n1').value;
+                let love = document.getElementById('n2').value;
+
+                let table = document.querySelector('body');
+                let table = document.createElement('table');
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                let nam = document.createTextNode('NAME');
+                let lov = document.createTextNode('LOVER');
+                td.appendChild(nam);
+                tr.appendChild(td);
+                table.appendChild(tr);
+                body.appendChild(table);
+                
+            }
+
+        </script>
+    </body>
+</html>

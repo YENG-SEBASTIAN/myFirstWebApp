@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> table </title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        
+        <table id="table" border="1">
+            
+            <!-- The Row Number 0 -->
+            <tr>
+                <th>Products </th>
+                <th>Price</th>
+                
+            </tr>
+
+        </table>
+
+        <button onclick="myfun()">click me</button>
+        <p id="me"></p>
+        <script>
+            
+            var array = [["Milk","10.00"],["Milk","10.00"],
+                         ["Nido","3.00"],
+                         ["Cowbell","5.00"],
+                         ["Soap","7.00"],
+                         ["Peak","1.00"],
+                         ["Nunu","1.50"],
+                         ["Liften","2.50"],
+                         ["Yanbo","1.50"],
+                         ["Cow","3.00"]];
+                table = document.getElementById("table");
+            
+     
+           
+           // creating the table 
+           
+           for(var i = 0; i < array.length; i++)
+           {
+               // create a new row
+               var newRow = table.insertRow(table.length);
+               for(var j = 0; j < array[i].length; j++)
+               {
+                   // create a new cell
+                   var cell = newRow.insertCell(j);
+                   
+                   // add value to the cell
+                   cell.innerHTML = array[i][j];
+               }
+           }
+
+           function myfun(){
+            document.getElementById("me").innerHTML = "hello!! the love percentage between you and your lover is:";
+           }
+        </script>
+        
+    </body>
+</html>

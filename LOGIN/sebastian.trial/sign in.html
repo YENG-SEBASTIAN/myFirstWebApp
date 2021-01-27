@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Service</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    border-radius: 100px 0px 0px;
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 0.5;
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+/* style the menus*/
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    margin: 20px;
+}
+/* style when mouse hover */
+nav a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Style the content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+/* creating a page with space between */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.right{
+    width: 50%;
+    float: left;
+    padding: 15px;
+}
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+.form input[type="email"]{
+    width: 250px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    
+}
+.form textarea{
+  width: 300px;
+  color: red;
+  background-color: rgb(185, 205, 228);
+}
+.form input[type="submit"]{
+  width: 30%;
+  padding: 15px;
+  background: green;
+}
+.form input[type="submit"]:hover{
+  color: white;
+  background-color: gray;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>sAbs. InT.</h2>
+</header>
+
+<section> 
+  <nav>
+    <ul>
+      <li><a href="Sebastian.html">HOME</a></li>
+      <li><a href="Sebastian.html">ABOUT US</a></li>
+      <li><a href="#service">SERVICE</a></li>
+      <li><a href="#contact">CONTACT US</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <div class="row">
+      <h3 id="service">Service</h3>
+      <p>Read and get to know more about our various courses we offer.</p>
+      <div class="right">
+      <div class="card">
+        <h4>PROFESSIONAL CERTIFICATE IN CYBER SECURITY AND MALWARE ANALYTICS</h4>
+          <div class="fakeimg">
+            <P>Module needed for this course are:</P>
+            <p>
+              <ul>
+                <li>Intoduction to computer networks</li>
+                <li>Cyber security attacks</li>
+                <li>Cyber security methods</li>
+                <li>Pratical network packet analysis</li>
+                <li>Network monitoring and deep packet inspection</li>
+                <li>Cyber analytics</li>
+                <li>Malware analytics</li>
+              </ul>
+            </p>
+          </div>
+          <h4>Pre-requistite & Target groups one can join after the course</h4>
+            <ul>
+              <li>IT profesionals in the financial, security service, ministries and departments, NGOs </li>
+              <li>Knowledge in cyber/information security field</li>
+              <li>CCNA certificate</li>
+              <h5>Duration(hours): 80 hours</h5>
+            </ul>
+      </div>
+     </div>
+     <div class="right">
+      <div class="card">
+        <h4>PROFESSIONAL CERTIFICATE IN CYBER ATTACK AND PREVENTION TECHNIQUES</h4>
+          <div class="fakeimg">
+            <p>Module include:</p>
+            <ul>
+              <li>Computer network fundamentals</li>
+              <li>Cyber attacks</li>
+              <li>Cyber security methods</li>
+              <li>Cryptographic methodologies</li>
+              <li>Digital signature</li>
+              <li>PKI (public key infrastructure)</li>
+            </ul>
+          </div>
+          <p>Pre-requist & target groups</p>
+          <ul>
+            <li>IT profesionals in the financial, security service, ministries and departments, NGOs </li>
+            <li>Knowledge in cyber/ information field</li>
+            <li>CCNA certificate</li>
+            <h5>Duration(hours): 80 hours</h5>
+          </ul>
+      </div>
+     </div>
+    </div>
+
+    <div class="row">
+      <div class="right">
+      <div class="card">
+        <h4>PROFESSIONAL CERTIFICATE IN BIG DATA ANALYTICS</h4>
+          <div class="fakeimg">
+            <P>Module include:</P>
+            <p>
+              <ul>
+                <li>Intoduction to big data</li>
+                <li>Big data component</li>
+                <li>Introduction to hadoop</li>
+                <li>Hadoop architecture</li>
+              </ul>
+            </p>
+          </div>
+          <h4>Pre-requistite & Target groups one can join after the course</h4>
+            <ul>
+              <li>Bachelor degree/ HND in computer science, engineering, statistics and it equivalent courses</li>
+              <li>e-ITEC certificate in data analytics</li>
+              <li>AT least 3 years working with data analytics or atatitics</li>
+              <h5>Duration(hours): 80 hours</h5>
+            </ul>
+      </div>
+     </div>
+     <div class="right">
+      <div class="card">
+        <h4>CERTIFICATE IN SOFTWARE DEVELOPMENT(CSD)</h4>
+          <div class="fakeimg">
+            <p>Module include:</p>
+            <ul>
+              <li>Fundamentals of computing</li>
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+              <li>Software engineering</li>
+              <li>Database concepts & technology</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <p>Pre-requist & target groups</p>
+          <ul>
+            <li>SHS graduate</li>
+            <li>Tertiary graduates, regardless to the course</li>
+            <h5>Duration(hours): 248 hours</h5>
+          </ul>
+      </div>
+     </div>
+    </div>
+  </article>
+</section>
+<section>
+  <div class="card">
+    <h3 id="contact">Contact Us</h3>
+      <div class="fakeimg">
+        <form action="" class="form">
+          <p>E-mail</p>
+            <input type="email" placeholder="Enter tour email"><br><br>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Write us something"></textarea><br>
+            <input type="submit" value="Send">
+        </form>
+      </div>
+  </div>
+  <div class="fakeimg">
+    <h2 style="text-align: center;">ADMINISTRATORS</h2>
+    <div class="card">
+      <img src="IMG/dad.JPG" alt="Admins" style="width: 200px; height: 250px; border-radius: 10px 80px; padding: 20px;">
+      <img src="IMG/me.jpg" alt="Admins" style="width: 200px; height: 250px; border-radius: 10px 80px; padding: 20px;">
+      <img src="IMG/kent.JPG" alt="Admins" style="width: 200px; height: 250px; border-radius: 10px 80px; padding: 20px;">
+    </div>
+  </div>
+</section>
+
+<footer style="height: 150px;">
+  <section>
+  <div class="row">
+    
+    <div class="right">
+
+      <p>
+        info@sabs-int.gh
+      </p>
+      <p>
+        Digital add: AJ 0003-1110
+      </p>
+
+      </p>
+    </div>
+  <div class="right">
+    <h3>OUR CENTERS</h3>
+    <table>
+      <tr>
+        <th>Accra</th>
+        <th>Sunyani</th> 
+        <th>Kumasi</th>
+        <th>Upper west</th>
+      </tr>
+      <tr>
+        <td>0547110789</td>
+        <td>0206984024</td>
+        <td>0556987453</td>
+        <td>0575614739</td>
+      </tr>
+      <tr>
+        <td>0203346123</td>
+    </table>
+    
+  </div>
+  </div>
+</section>
+</footer>
+
+</body>
+

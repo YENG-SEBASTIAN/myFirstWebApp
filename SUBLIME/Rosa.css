@@ -1,0 +1,106 @@
+body{
+	background-image: url('image/hero.jpg');
+
+}
+.nav-main{
+	width: 100%;
+	height: 60px;
+	background-color: gray;
+	display: flex;
+	flex-wrap: wrap;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+}
+.btn-toggle-nav{
+	width: 40px;
+	height: 100%;
+	background-color: ;
+	background-image: url('image/btn.PNG');
+	background-repeat: no-repeat;
+	background-size: ;
+	background-position: center;
+	background-color: orange;
+	cursor: pointer;
+	padding: 0px;
+	margin: 0px;
+	float: right;
+}
+.btn-toggle-nav:hover{
+	opacity: .5;
+}
+.nav-main ul{
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 15px;
+}
+.ll{
+	padding-left: 20%
+}
+.nav-main ul li{
+	list-style: none;
+	line-height: 60px;
+}
+.nav-main ul li a{
+	display: block;
+	height: 100%;
+	padding: 0 10px;
+	text-decoration: none;
+	color: #111;font-family: arial;
+	font-size: 16px;
+}
+.side-bar ul{
+	padding-top: 15px;
+	overflow: hidden;
+	visibility: hidden;
+}
+.side-bar ul li{
+	line-height: 60px;
+	list-style: none;
+}
+.side-bar ul li a{
+	display: block;
+	height: 60px;
+	padding: 0 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: arial;
+	font-size: 16px;
+	white-space: nowrap;
+}
+.side-bar ul li a:hover{
+	background-color: #222;
+}
+.seperator{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.line{
+    width: 100%;
+    max-width: 8.4rem;
+    background-color: green;
+    position: relative;
+    border: 2px solid transparent;
+}
+.line-left::before{
+    border-left-color: green;
+    left: 0;
+}
+.asterish{
+    color: red;
+    font-size: 2.4rem;
+    margin:0 0.1rem;
+}
+.hero .bnt{
+	display: block; 
+	margin-left: auto;
+	margin-right: auto;
+	background-color: green;
+	cursor: pointer;
+}
+.hero .bnt:hover{
+	opacity: 0.7;
+	color: white;
+}

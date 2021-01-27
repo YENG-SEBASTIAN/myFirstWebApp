@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calcus</title>
+        <style>
+            header{
+                text-align: center;
+                padding-top: 30px;
+            }
+            body{
+                background: url('image/love4.jpeg');
+            }
+            .form{
+                text-align: center;
+                padding-top: 60px;
+            }
+            input[type='text']{
+                width: 30%;
+                text-align: center;
+                padding: 15px;
+                border: 1px solid black;
+                border-radius: 20px;
+            }
+            .form-content button{
+                width: 15%;
+                padding: 10px;
+                background: green;
+                cursor: pointer;
+            }
+             .form-content button:hover{
+                 color: white;
+                 background: red;
+                 opacity: 0.5;
+             }
+             /*animate the form to popup in a smooth way*/
+.animat{
+    -webkit-animation: popup 10s;
+    animation: popup 10s;
+}
+@-webkit-keyframes popup{
+    from{
+        -webkit-transform: scale(0);
+    }to{
+        -webkit-transform: scale(1);
+    }
+}
+#animation{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+    animation-direction: alternate;    
+    display: non;
+
+}
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:1000px; top:0px;}
+    50%  {background-color:blue; left:1000px; top:0px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+
+        </style>
+    </head>
+        <body class="animate">
+            <header>
+                <h1>Woww!!! here you are on the calculator page.</h1>
+            </header>
+            
+            <section class="form" id="form" ">
+                <form action="" class="form-content" onsubmit="ShowData()>
+                     <input type="text" id="n1" placeholder="Enter your name"><br><br>
+                    <input type="text" id="n2" placeholder="Lover/Crush name"><br><br>
+                    <button id="cal" onclick="ShowData()" >Calculate</button> 
+
+                    
+                    
+                </form>
+            </section>
+
+            <div id="animation"></div>
+
+            </div>
+            <script src="love.js"></script>
+        </body>
+</html>
+

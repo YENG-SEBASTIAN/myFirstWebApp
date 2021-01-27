@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Sign up</title>
+    <link rel="icon" href="IMG/kent.JPG">
+    <style>
+        body{
+            background-image: url('IMG/emilio.PNG');
+        }
+        .form{
+            background-color: rgb(177, 155, 116);
+            width: 400px;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 30px;
+            left: 35%;
+            right: 25%;
+            bottom: 25%
+            position:absolute;
+
+        }
+        .form h1{
+            padding: 10px;
+            text-align: center;
+        
+             ;
+        }
+        .form h2{
+            text-align: center;
+            color: rgba(0, 12, 2, 0.836);
+            padding: 20px;
+            margin: 20px;
+        }
+        a{
+            text-transform: uppercase;
+            text-decoration: none;
+            font: 15px;
+        }
+        .but a{
+            width: 30%;
+            height: 35px;
+            border: none;
+            padding: 15px;
+            overflow: hidden;
+        }
+         a:hover{
+            cursor: pointer;
+            background-color: pink;
+            color: red;
+        }
+        .form input[type="text"],input[type="email"],input[type="password"]{
+            padding: 15px;
+            margin: 5px;
+            width: 80%;
+            border: none;
+            border-radius: 25px;
+            text-align: center;
+        }
+        .form input[type="submit"]{
+            width: 50%;
+            padding: 10px;
+            margin: 20px;
+            margin-left: 20%;
+            background-color: green;
+            color: black;
+            font: bold;
+        }
+        .form input[type="submit"]:hover{
+            cursor: pointer;
+            color: white;
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <form action="home.html" class="form">
+        <h1>GAHA.INT. FORM</h1>
+        <h2>
+            <nav class="but">
+                <a href="SIGN.html" style="float: left;">Sign up</a>
+                <a href="Login.html" style="float: right;">Sign in</a>
+            </nav>
+        </h2>
+        <p>USERNAME</p>
+        <input type="text" placeholder="Enter your name">
+        <p>E-MAIL</p>
+        <input type="email" placeholder="E-Mail">
+        <p>PASSWORD</p>
+        <input type="password" placeholder="Password">
+        <p>CONFIRM PASSWORD</p>
+        <input type="password" placeholder="Re-enter password">
+       <input type="submit" value="Sign in">
+       
+       
+      
+
+    </form>
+
+</body>
+</html>

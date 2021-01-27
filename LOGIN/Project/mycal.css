@@ -1,0 +1,147 @@
+body{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.love4{
+    background: url('image/love4.jpeg');
+    height: 450px;
+    padding-top: 70px;
+}
+section h1{
+    font-size: 40px;
+    font-variant: small-caps;
+    font-style: italic;
+}
+/*styling the head with different colors*/
+.first{
+    color: red;
+    font-size: 70px;
+}
+.dot{
+    color: green;
+
+}
+.c{
+    color: red;
+    font-size: 70px;
+}
+.r{
+    color: blue;
+}
+.t{
+    color: orange;
+}
+.cc{
+    color: green;
+}
+.u{
+    color: violet;
+}
+/*end of the heading style*/
+.love4 button{
+    color: black;
+    background: green;
+    padding: 15px ;
+    width: 70px;
+    cursor: pointer;
+}
+.love4 button:hover{
+    opacity: 0.5;
+    color: white;
+    background: red;
+}
+.form{
+    background: url('image/love1.jpeg');
+    height: 500px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.close{
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    float: right;
+    padding-right: 30px;
+}
+.close:hover{
+    color: red;
+}
+.form-content h3{
+    font-style: italic;
+    padding-top: 100px;
+}
+.input{
+    padding-top: 30px;
+}
+.input input[type="text"]{
+    width: 30%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0.8;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+.input button{
+    width: 20%;
+    padding: 15px;
+    color: black;
+    background: green;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.input button:hover{
+    color: white;
+    background: red;
+    opacity: 0.5;
+}
+/*animate the form to popup in a smooth way*/
+.animate{
+    -webkit-animation: popup 10s;
+    animation: popup 10s;
+}
+@-webkit-keyframes popup{
+    from{
+        -webkit-transform: scale(0);
+    }to{
+        -webkit-transform: scale(1);
+    }
+}
+.outcome{
+    background: url('image/love3.jpeg');
+    height: 500px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 100px;
+}
+.out{
+    color: black;
+    background: white;
+    opacity: 0.5;
+    font-size: 20px;
+    font-style: italic;
+    font-family: serif;
+}
+.out h1{
+    font-variant: small-caps;
+}
+.f{
+    color: red;
+    font-weight: bold;
+    font-size: 60px;
+}

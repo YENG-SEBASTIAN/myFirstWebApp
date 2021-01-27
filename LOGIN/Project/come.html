@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+
+
+    <head>
+        <title>FONT</title>
+        
+    </head>
+<body>
+    <div>
+        <span>The Time Is: </span>
+        <span id="clock"></span>
+    </div >
+
+<div>
+    <p>
+        The size of this page characters  are going to be resized.
+    </p>
+    <p>click on the plus(+) and minus(-) to see the effect of it.</p>
+    
+</div>
+<button onclick="increaseFontSize()">+</button> <button onclick="decreaseFontSize()">-</button>
+
+
+
+        <script >
+        
+       // time
+        let d = new Date();
+        let ck = document.getElementById('clock');
+        ck.innerHTML = d.toLocaleTimeString();
+        function time() {
+            let d = new Date();
+            let ck = document.getElementById('clock');
+            ck.innerHTML = d.toLocaleTimeString();
+        }
+        setInterval(time, 1000);
+      
+
+            //writing script to enable us change the font size of this site
+           
+            var min=8;
+            var max=18;
+function increaseFontSize() {
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+}
+function decreaseFontSize() {
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }   
+}
+
+
+        </script>
+    </body>
+</html>

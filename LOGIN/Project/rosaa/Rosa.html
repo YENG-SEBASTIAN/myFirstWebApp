@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rosa hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Rosa.css">
+    <link rel="icon" href="image/mango_org.png">
+</head>
+<body>
+    <header class="head">
+        <h1>Rosa Hotel</h1>
+        <h3><marquee behavior="" direction="">Ready to be opened</marquee></h3>
+    </header>
+    <div class="nav">
+        <div>
+            <img src="image/logo-rosa.png" alt="">
+        </div>
+        <ul class="topnav">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" onclick="document.getElementById('form').style.display='block'">Login</a></li>
+          </ul>
+    </div>
+    <!-- creating of a form -->
+    <div id="form" class="form">
+        <form action="" method="POST" class="form-content animate">
+            <div class="imgcontent" style="height: ;">
+                <span class="close" title="closeform" onclick="document.getElementById('form').style.display='none'">&times;</span>
+            <img src="image/mango_org.png" alt="PIC" class="pic" style="width: 70%;height: 70%;">
+            <div>
+                <img src="image/logo-rosa.png" alt="logo">
+            </div>
+            </div>
+
+            <div class="container">
+                <label for="usern"><b>Username</b></label>
+                <input type="text" name="usen" placeholder="Enter username" required>
+                    <br><br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" name="psw" placeholder="Enter Password" required>
+                    <br><br>
+                <button type="submit">Login</button>
+                    <br><br>
+                <label for="chk">
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="blind" style="background-color: #f1f1f1;">
+                <button type="button" class="cancelbtn" onclick="document.getElementById('form').style.display='none'">Cancel</button>
+                <span class="psw">Forgot <a href="#">Password?</a></span>
+            </div>
+        </form>
+    </div>
+    <!-- javscript to function on the form -->
+    <script>
+        //get the form.
+        var form = document.getElementById('form');
+
+        //when the user click anywere excipt on the form close it.
+        windows.onclick = function(event){
+            if(event.target == form){
+                form.style.display = "none";
+            }
+        }
+    </script>
+    <!-- creating a parallex in the first section -->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade" id="home">
+          <div class="numbertext">1 / 3</div>
+          <img src=" image/menu-group-1.jpg" style="width:100%; height: 300px;">
+          <div class="text" style="color: black;">All kinds of meals will soon be available</div>
+        </div>
+        
+        <div class="mySlides fade" id="">
+          <div class="numbertext">2 / 3</div>
+          <img src="image/delight-group-1.jpg" style="width:100%; height: 300px;">
+          <div class="text"><b>Get ready to make your order.</b></div>
+        </div>
+        
+        <div class="mySlides fade" id="contact" style="background-color: rgba(0, 0, 0, 0.5); text-align: center; " >
+            <div style="text-align: center;"><p><b>Contact us</b></p></div>
+          <div class="numbertext">3 / 3</div>
+          
+          <div style="background-color: orange; text-align: center; height: 400px; display: flex; ">
+            <div>
+                <img src="image/me.jpg" alt="sebastian" style="width: 200px; height: 200; padding: 20px; border-radius: 50%; ">
+                <div style="text-align: center;"><p><b>Sebastian</b></p></div>
+            </div>
+
+            <div>
+                <img src="image/ppp.JPG" alt="esther" style="width: 200px; height: 200; padding: 20px; border-radius: 50%;">
+                <div style="text-align: center;"><p><b>Portia</b></p></div>
+            </div>
+
+            <div>
+                <img src="image/kent.JPG" alt="kent" style="width: 200px; height: 350; padding: 20px; border-radius: 50%;">
+                <div style="text-align: center;"><p><b>Kent</b></p></div>
+            </div>
+
+          </div>
+            
+          <div class="text">We are available for your service.</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+        <!-- writing another codes for the section of the of the site -->
+        <section class="hero" id="hero">
+            <div class="well">
+                <h3><span class="first">W</span>elcome To</h3>
+            </div>
+            <div class="rosa">
+                <h1>Rosa Hotel</h1>
+            </div>
+            <div class="seperator">
+                <div class="dot"></div>
+                <div class="line line1"></div>
+                <div class="asterish">*</div>
+                <div class="line line2"></div>
+                <div class="dot"></div>
+            </div>
+
+            <button class="read"><a href="#hero">Read More</a></button>
+
+        </section>
+
+</body>
+</html>
